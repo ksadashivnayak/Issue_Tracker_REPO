@@ -1,0 +1,82 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.hrm.i.HRM_INCIDENT_001.controller.Main_page"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page title="Title">
+				<content>
+					<Table id='incidentTab1' items="{path: '/incidents'}" width="auto" growing="true" growingScrollToLoad="true"
+						updateFinished=".onUpdateFinished">
+						<headerToolbar>
+							<OverflowToolbar>
+								<Title id="tableHeader" text="List of Incidents" level="H3"/>
+								<ToolbarSpacer/>
+								<SearchField id="searchCategory" tooltip="Category" placeholder="Category" search=".onSearchCat">
+									<layoutData>
+										<OverflowToolbarLayoutData maxWidth="200px" priority="NeverOverflow"/>
+									</layoutData>
+								</SearchField>
+								<SearchField id="searchUrgency" tooltip="Urgency" placeholder="Urgency" search=".onSearchUrg">
+									<layoutData>
+										<OverflowToolbarLayoutData maxWidth="200px" priority="NeverOverflow"/>
+									</layoutData>
+								</SearchField>
+								<SearchField id="searchStatus" tooltip="Status" placeholder="Status" search=".onSearchStatus">
+									<layoutData>
+										<OverflowToolbarLayoutData maxWidth="200px" priority="NeverOverflow"/>
+									</layoutData>
+								</SearchField>
+								<SearchField id="searchArea" tooltip="Area" placeholder="Area" search=".onSearchArea">
+									<layoutData>
+										<OverflowToolbarLayoutData maxWidth="200px" priority="NeverOverflow"/>
+									</layoutData>
+								</SearchField>
+							</OverflowToolbar>
+						</headerToolbar>
+						<columns>
+							<Column id="ColumnDes">
+								<Text text="Description" id="work1"/>
+							</Column>
+							<Column id="ColumnEnt">
+								<Text text="Entities" id="work2"/>
+							</Column>
+							<Column id="ColumnUrg">
+								<Text text="Urgency" id="work3"/>
+							</Column>
+							<Column id="ColumnCat">
+								<Text text="Category" id="work4"/>
+							</Column>
+							<Column id="ColumnAre">
+								<Text text="Area" id="work5"/>
+							</Column>
+							<Column id="ColumnTyp">
+								<Text text="Type" id="work6"/>
+							</Column>
+							<Column id="ColumnSta">
+								<Text text="Status" id="work7"/>
+							</Column>
+							<Column id="ColumnSen">
+								<Text text="Sensitivity" id="work8"/>
+							</Column>
+							<Column id="ColumnCos">
+								<Text text="$Cost Impact" id="work9"/>
+							</Column>
+						</columns>
+						<ColumnListItem type="Navigation" press=".onPress">
+							<cells>
+								<ObjectIdentifier title="{description}"/>
+								<Text text="{objectId}"/>
+								<Text text="{priority}"/>
+								<Text text="{category}"/>
+								<Text text="{objectType}"/>
+								<Text text="{type}"/>
+								<Text text="{status}"/>
+								<Text text="{sensitivity}"/>
+								<ObjectNumber number="{ path: 'impact' }"/>
+							</cells>
+						</ColumnListItem>
+					</Table>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

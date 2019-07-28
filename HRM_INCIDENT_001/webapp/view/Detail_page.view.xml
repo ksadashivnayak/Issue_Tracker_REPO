@@ -1,0 +1,24 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	controllerName="com.hrm.i.HRM_INCIDENT_001.controller.Detail_page" xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page title="Title">
+				<content>
+					<IconTabBar id="idIconTabBarFiori2" upperCase="true" expanded="{device>/isNoPhone}" class="sapUiResponsiveContentPadding">
+						<items>
+							<IconTabFilter text="Proposed Solution">
+								<Text text="{proposed}"/>
+							</IconTabFilter>
+							<IconTabFilter text="Process Flow">
+								<Text text="Flow1 -> Flow2 -> Flow3"/>
+							</IconTabFilter>
+							<IconTabFilter text="Impacted Assets">
+								<Text text="{impactedAssets[0]}"/>
+							</IconTabFilter>
+						</items>
+					</IconTabBar>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

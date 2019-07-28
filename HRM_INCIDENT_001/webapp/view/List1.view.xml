@@ -1,0 +1,7 @@
+<mvc:View controllerName="com.hrm.i.HRM_INCIDENT_001.controller.List1" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<Shell id="shell">
+		<App id="app">
+			
+		</App>
+	</Shell>
+</mvc:View>
